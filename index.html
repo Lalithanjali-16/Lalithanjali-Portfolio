@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Lalithanjali Robbi – Full Stack & AI/ML Engineer. Portfolio showcasing projects in React, Node.js, RAG, and Deep Learning." />
+    <title>Lalithanjali Robbi | Full Stack & AI/ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">LR<span class="dot">.</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="mailto:lalithanjalirobbi@gmail.com" class="nav-cta">Hire Me</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="hero_bg.png" alt="background" class="hero-bg-img" />
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fadein" style="--delay:0.1s">
+                <span class="badge-dot"></span> Open to opportunities
+            </div>
+            <h1 class="hero-name animate-fadein" style="--delay:0.3s">
+                Lalithanjali<br /><span class="gradient-text">Robbi</span>
+            </h1>
+            <p class="hero-title animate-fadein" style="--delay:0.5s">
+                <span class="typed-wrapper"><span id="typed"></span><span class="cursor">|</span></span>
+            </p>
+            <p class="hero-sub animate-fadein" style="--delay:0.7s">
+                B.Tech IT Graduate · Hyderabad, India · Building scalable web apps & AI systems
+            </p>
+            <div class="hero-btns animate-fadein" style="--delay:0.9s">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+            <div class="hero-socials animate-fadein" style="--delay:1.1s">
+                <a href="https://github.com/Lalithanjali-16/" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.93c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 012.86-.38c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/lalithanjali-robbi-19269a252/" target="_blank" rel="noopener"
+                    class="social-icon" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+                    </svg>
+                </a>
+                <a href="mailto:lalithanjalirobbi@gmail.com" class="social-icon" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8.88l8 5 8-5V18z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-label">01 / About</div>
+            <h2 class="section-title">Who I Am</h2>
+            <div class="about-grid">
+                <div class="about-avatar-wrap">
+                    <div class="about-avatar">
+                        <div class="avatar-initials">LR</div>
+                        <div class="avatar-ring ring-1"></div>
+                        <div class="avatar-ring ring-2"></div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-num">4+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">9.27</span>
+                            <span class="stat-label">CGPA</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">AIR</span>
+                            <span class="stat-label">477 Rank</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-lead">
+                        I'm a <strong>Full Stack & AI/ML Engineer</strong> with a B.Tech in Information Technology
+                        (2025) from ANITS, Visakhapatnam, graduating with a <strong>9.27 CGPA</strong>.
+                    </p>
+                    <p>
+                        I work at <strong>Inncircles Arena</strong> as a Software Engineer, where I build scalable
+                        automated testing infrastructure with Playwright and architect RAG pipelines using ChromaDB and
+                        LLM embeddings.
+                    </p>
+                    <p>
+                        I'm passionate about bridging the gap between traditional software engineering and modern AI
+                        systems — from crafting full-stack MERN applications to training deep learning models achieving
+                        <strong>97.97% accuracy</strong> in medical image segmentation.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">Full Stack</span>
+                        <span class="tag">AI / ML</span>
+                        <span class="tag">RAG Systems</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                    <div class="about-edu">
+                        <div class="edu-icon">🎓</div>
+                        <div>
+                            <strong>B.Tech, Information Technology</strong><br />
+                            <span>Anil Neerukonda Institute of Technology &amp; Sciences, Visakhapatnam · 2021–2025 ·
+                                9.27 CGPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section section-dark">
+        <div class="container">
+            <div class="section-label">02 / Skills</div>
+            <h2 class="section-title">Technical Arsenal</h2>
+            <div class="skills-grid">
+
+                <div class="skill-group reveal">
+                    <div class="skill-group-icon">⚡</div>
+                    <h3>Languages</h3>
+                    <div class="skill-pills">
+                        <span class="pill">Python</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">Java</span>
+                        <span class="pill">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-group reveal">
+                    <div class="skill-group-icon">🌐</div>
+                    <h3>Web & Backend</h3>
+                    <div class="skill-pills">
+                        <span class="pill">React.js</span>
+                        <span class="pill">Redux</span>
+                        <span class="pill">Node.js</span>
+                        <span class="pill">Express.js</span>
+                        <span class="pill">Tailwind CSS</span>
+                        <span class="pill">REST APIs</span>
+                        <span class="pill">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-group reveal">
+                    <div class="skill-group-icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <div class="skill-pills">
+                        <span class="pill">MongoDB</span>
+                        <span class="pill">MySQL</span>
+                        <span class="pill">ChromaDB</span>
+                        <span class="pill">Vector DB</span>
+                    </div>
+                </div>
+
+                <div class="skill-group reveal">
+                    <div class="skill-group-icon">🤖</div>
+                    <h3>AI / ML & LLMs</h3>
+                    <div class="skill-pills">
+                        <span class="pill pill-accent">LangChain</span>
+                        <span class="pill pill-accent">OpenAI API</span>
+                        <span class="pill pill-accent">RAG Pipelines</span>
+                        <span class="pill pill-accent">CNNs</span>
+                        <span class="pill pill-accent">Transfer Learning</span>
+                        <span class="pill pill-accent">Scikit-learn</span>
+                        <span class="pill pill-accent">PyTorch</span>
+                        <span class="pill pill-accent">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <div class="skill-group reveal">
+                    <div class="skill-group-icon">🧪</div>
+                    <h3>Testing & DevOps</h3>
+                    <div class="skill-pills">
+                        <span class="pill">Playwright</span>
+                        <span class="pill">Git / GitHub</span>
+                        <span class="pill">Firebase</span>
+                        <span class="pill">AWS EC2</span>
+                        <span class="pill">Nginx</span>
+                        <span class="pill">Netlify</span>
+                    </div>
+                </div>
+
+                <div class="skill-group reveal">
+                    <div class="skill-group-icon">🧠</div>
+                    <h3>Core Concepts</h3>
+                    <div class="skill-pills">
+                        <span class="pill">DSA</span>
+                        <span class="pill">OOP</span>
+                        <span class="pill">System Design</span>
+                        <span class="pill">Debugging</span>
+                        <span class="pill">RAG Architecture</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-label">03 / Experience</div>
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Software Engineer – Automation</h3>
+                                <p class="timeline-company">Inncircles Arena · Hyderabad, India</p>
+                            </div>
+                            <span class="timeline-date">Aug 2024 – Present</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Collaborated with frontend and backend engineers to enhance cost &amp; billing
+                                workflows, reducing billing discrepancies by <strong>15%</strong> and improving
+                                financial data consistency.</li>
+                            <li>Analyzed UI and API workflows to identify and fix <strong>20+ high-severity production
+                                    issues</strong>, mitigating potential annual revenue impact of
+                                <strong>$1.2M</strong>.
+                            </li>
+                            <li>Designed scalable automated testing infrastructure using <strong>Playwright
+                                    (JavaScript)</strong>, building reusable test utilities that improved regression
+                                coverage by <strong>40%</strong> and accelerated release cycles.</li>
+                            <li>Architected end-to-end <strong>RAG pipelines</strong> using ChromaDB and vector
+                                embeddings for high-precision, context-aware LLM responses.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Playwright</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">LLMs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Machine Learning Research Intern</h3>
+                                <p class="timeline-company">University of Hyderabad · Hyderabad, India</p>
+                            </div>
+                            <span class="timeline-date">May 2024 – Jun 2024</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Fine-tuned <strong>ResNet, VGG16, and AlexNet</strong> architectures for medical image
+                                classification, achieving <strong>95% peak validation accuracy</strong> on diabetic
+                                retinopathy datasets.</li>
+                            <li>Implemented <strong>Boosting and Bagging</strong> ensemble methods using Scikit-learn,
+                                improving F1-scores by <strong>12%</strong> over baseline CNNs.</li>
+                            <li>Optimized data augmentation and preprocessing workflows, reducing experiment iteration
+                                time by <strong>30%</strong>.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">ResNet</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section section-dark">
+        <div class="container">
+            <div class="section-label">04 / Projects</div>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Netflix GPT -->
+                <div class="project-card reveal" id="proj-netflix">
+                    <div class="project-glow"></div>
+                    <div class="project-top">
+                        <div class="project-icon">🎬</div>
+                        <div class="project-links">
+                            <a href="https://wonderful-dasik-41605e.netlify.app/" target="_blank" rel="noopener"
+                                class="proj-link" title="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Lalithanjali-16/Netflix-GPT" target="_blank" rel="noopener"
+                                class="proj-link" title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.93c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 012.86-.38c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">NetflixGPT</h3>
+                        <p class="project-tagline">AI-Powered Movie Recommender</p>
+                        <p class="project-desc">A Netflix-inspired UI with real-time genre-based movie data via TMDB
+                            API, featuring LLM-powered natural language search through Together.ai, Firebase
+                            authentication, and dynamic trailer backgrounds.</p>
+                        <ul class="project-highlights">
+                            <li>🔍 Natural language movie search via LLM</li>
+                            <li>🌍 Multi-language support</li>
+                            <li>🎥 Dynamic YouTube trailer backgrounds</li>
+                            <li>⚡ Optimized Redux state management</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <div class="proj-tech">
+                            <span>React.js</span><span>Redux</span><span>Firebase</span><span>Together.ai</span><span>TMDB
+                                API</span>
+                        </div>
+                        <a href="https://wonderful-dasik-41605e.netlify.app/" target="_blank" rel="noopener"
+                            class="proj-live-btn">Live Demo →</a>
+                    </div>
+                </div>
+
+                <!-- DevTinder -->
+                <div class="project-card reveal" id="proj-devtinder">
+                    <div class="project-glow glow-pink"></div>
+                    <div class="project-top">
+                        <div class="project-icon">💻</div>
+                        <div class="project-links">
+                            <a href="https://github.com/Lalithanjali-16/DevTinder-web" target="_blank" rel="noopener"
+                                class="proj-link" title="Frontend GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.93c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 012.86-.38c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">DevTinder</h3>
+                        <p class="project-tagline">Full-Stack Developer Networking Platform</p>
+                        <p class="project-desc">A Tinder-style networking app for developers. Swipe, connect, and
+                            collaborate. Full-stack MERN app with JWT auth, connection requests, and a deployed backend
+                            on AWS EC2 with Nginx reverse proxy.</p>
+                        <ul class="project-highlights">
+                            <li>🔐 JWT authentication & protected routes</li>
+                            <li>🤝 Send / accept / reject connection requests</li>
+                            <li>☁️ Deployed on AWS EC2 + Nginx</li>
+                            <li>⚡ Redux for smooth state management</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <div class="proj-tech">
+                            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>AWS
+                                EC2</span><span>Nginx</span>
+                        </div>
+                        <div class="proj-links-row">
+                            <a href="https://github.com/Lalithanjali-16/DevTinder-web" target="_blank" rel="noopener"
+                                class="proj-gh-btn">Frontend ↗</a>
+                            <a href="https://github.com/Lalithanjali-16/DevTinder" target="_blank" rel="noopener"
+                                class="proj-gh-btn">Backend ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Resume Matcher -->
+                <div class="project-card reveal" id="proj-ai">
+                    <div class="project-glow glow-green"></div>
+                    <div class="project-top">
+                        <div class="project-icon">🤖</div>
+                        <div class="project-links">
+                            <a href="https://ai-resume-matcher-kehmiljbttbtqrrqvomyww.streamlit.app/" target="_blank"
+                                rel="noopener" class="proj-link" title="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Lalithanjali-16/AI-Resume-Matcher" target="_blank"
+                                rel="noopener" class="proj-link" title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.93c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 012.86-.38c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">AI Resume Matcher</h3>
+                        <p class="project-tagline">RAG-Based Resume vs JD Analysis</p>
+                        <p class="project-desc">A RAG-powered system that compares resumes against job descriptions,
+                            generating match scores, identifying skill gaps, and providing automated improvement
+                            suggestions using OpenAI embeddings and ChromaDB.</p>
+                        <ul class="project-highlights">
+                            <li>📊 Match scores & skill gap analysis</li>
+                            <li>🔎 Semantic embedding pipeline via OpenAI</li>
+                            <li>☁️ Cloud CI/CD on Streamlit Cloud</li>
+                            <li>🔐 Secure API key management</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <div class="proj-tech">
+                            <span>Python</span><span>Streamlit</span><span>OpenAI</span><span>ChromaDB</span><span>RAG</span>
+                        </div>
+                        <a href="https://ai-resume-matcher-kehmiljbttbtqrrqvomyww.streamlit.app/" target="_blank"
+                            rel="noopener" class="proj-live-btn">Live Demo →</a>
+                    </div>
+                </div>
+
+                <!-- Research Paper -->
+                <div class="project-card reveal" id="proj-paper">
+                    <div class="project-glow glow-orange"></div>
+                    <div class="project-top">
+                        <div class="project-icon">📄</div>
+                        <div class="project-links">
+                            <a href="https://www.atlantis-press.com/proceedings/iccsce-25/126017576" target="_blank"
+                                rel="noopener" class="proj-link" title="Read Paper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Transfer Learning – BTCV</h3>
+                        <p class="project-tagline">Published Conference Paper · ICCSCE 2025</p>
+                        <p class="project-desc">Comparative study of CNN architectures (LeNet, AlexNet, VGG, ResNet) for
+                            complex medical image segmentation on the BTCV dataset using transfer learning,
+                            outperforming baseline models significantly.</p>
+                        <ul class="project-highlights">
+                            <li>🏆 97.97% accuracy on BTCV dataset</li>
+                            <li>🔬 ResNet-based multi-organ segmentation</li>
+                            <li>📚 Published at ICCSCE 2025</li>
+                            <li>⚡ Reduced training convergence time</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <div class="proj-tech">
+                            <span>PyTorch</span><span>ResNet</span><span>VGG16</span><span>Transfer Learning</span>
+                        </div>
+                        <a href="https://www.atlantis-press.com/proceedings/iccsce-25/126017576" target="_blank"
+                            rel="noopener" class="proj-live-btn">Read Paper →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-label">05 / Achievements</div>
+            <h2 class="section-title">Recognition</h2>
+            <div class="achievements-grid">
+
+                <div class="achievement-card reveal">
+                    <div class="ach-rank">🏅</div>
+                    <div class="ach-body">
+                        <h3>All India Rank 477</h3>
+                        <p>Coding World Cup conducted by <strong>Coding Ninjas</strong> — competed among thousands of
+                            nationwide participants.</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <div class="ach-rank">🥈</div>
+                    <div class="ach-body">
+                        <h3>Runner-up</h3>
+                        <p><strong>DSA Drive 2</strong> — College-level competitive programming contest focusing on Data
+                            Structures and Algorithms.</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <div class="ach-rank">🥇</div>
+                    <div class="ach-body">
+                        <h3>Winner</h3>
+                        <p><strong>Machine Learning Quiz</strong> organized by the IEEE Student Chapter, demonstrating
+                            strong ML fundamentals.</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <div class="ach-rank">📰</div>
+                    <div class="ach-body">
+                        <h3>Published Researcher</h3>
+                        <p>Research paper published at <strong>ICCSCE 2025</strong> (Atlantis Press) on Transfer
+                            Learning for medical image segmentation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <div class="section-label">06 / Contact</div>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-sub">I'm currently open to full-time roles in <strong>Full Stack</strong> and
+                <strong>AI/ML Engineering</strong>. Let's build something amazing together.
+            </p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <a href="mailto:lalithanjalirobbi@gmail.com" class="contact-item reveal">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-val">lalithanjalirobbi@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lalithanjali-robbi-19269a252/" target="_blank" rel="noopener"
+                        class="contact-item reveal">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-val">lalithanjali-robbi-19269a252</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Lalithanjali-16/" target="_blank" rel="noopener"
+                        class="contact-item reveal">
+                        <div class="contact-icon">🐙</div>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-val">Lalithanjali-16</span>
+                        </div>
+                    </a>
+                    <div class="contact-item reveal">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <span class="contact-label">Location</span>
+                            <span class="contact-val">Hyderabad, India</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="yourname@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Type your message here..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit" id="form-submit">Send Message ✈️</button>
+                    <p class="form-note" id="form-note"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed & built by <strong>Lalithanjali Robbi</strong> · 2025</p>
+            <p class="footer-sub">Full Stack & AI/ML Engineer · Hyderabad, India</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
