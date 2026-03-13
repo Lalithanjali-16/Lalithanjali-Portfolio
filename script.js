@@ -118,31 +118,7 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 // ============ CONTACT FORM ============
-const form = document.getElementById('contact-form');
-const submitBtn = document.getElementById('form-submit');
-const formNote = document.getElementById('form-note');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  submitBtn.textContent = 'Sending…';
-  submitBtn.disabled = true;
-
-  // Simulate send (mailto fallback)
-  setTimeout(() => {
-    const mailto = `mailto:lalithanjalirobbi@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + '\nEmail: ' + email)}`;
-    window.location.href = mailto;
-    submitBtn.textContent = 'Send Message ✈️';
-    submitBtn.disabled = false;
-    formNote.textContent = '✅ Your email client should open. Thanks for reaching out!';
-    form.reset();
-    setTimeout(() => formNote.textContent = '', 5000);
-  }, 1200);
-});
-
+// Netlify handles the form submission automatically, no custom JS needed here.
 // ============ SMOOTH COUNTER ANIMATION ============
 function animateCounter(el, target, suffix = '') {
   let current = 0;
